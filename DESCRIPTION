@@ -1,0 +1,16 @@
+Package: ProjectReporter
+Title: Set-up analysis project and helpers for markdown
+Version: 1.0.1
+Authors@R: 
+    person("Guillaume", "Mulier", , "DRY12@hotmail.fr", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-4036-7723"))
+Description: Create a project R with my personal architecture and provide some 
+    helper functions to format the report via officedown.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
+Imports: 
+    fs (>= 1.5.2),
+    rlang (>= 1.0.6),
+    starter (>= 0.1.12)

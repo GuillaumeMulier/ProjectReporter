@@ -9,6 +9,8 @@
 #' @param Auteur You, the author.
 #' @param Chefs Yours chiefs or statistician collegues that work with you on the project.
 #' @param Cliniciens The clinicians who came with the project.
+#' @param Acronyme The acronym of the study.
+#' @param TitreProjet The title of the report and project.
 #'
 #' @return NULL
 #' @export
@@ -20,7 +22,9 @@
 SetupProject <- function(
     Auteur = "Guillaume Mulier",
     Chefs = NULL,
-    Cliniciens = NULL
+    Cliniciens = NULL,
+    Acronyme = "Analyse",
+    TitreProjet = "Analysis report"
 ) {
 
   # Create rlang environment and evaluate it in the global environment as a side effect
@@ -28,7 +32,9 @@ SetupProject <- function(
       list(
         auteur = Auteur,
         chefs = Chefs,
-        cliniciens = Cliniciens
+        cliniciens = Cliniciens,
+        titre = TitreProjet,
+        acronyme = Acronyme
       ),
       parent = globalenv()
     )

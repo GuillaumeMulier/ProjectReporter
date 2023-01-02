@@ -1,0 +1,77 @@
+---
+title: "{{PROJECT_ENV$titre}}"
+author: "{{paste(c(PROJECT_ENV$cliniciens, PROJECT_ENV$auteur, PROJECT_ENV$chefs), collapse = ", ")}}"
+date: "`r format(Sys.Date(), format = c('%d/%m/%Y'))`"
+output: 
+  officedown::rdocx_document:
+    reference_docx: template_word_rmd.docx
+editor_options: 
+  markdown: 
+    wrap: sentence
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r packages, include=FALSE}
+here::i_am("Scripts/05 - Rapport.Rmd")
+library(here)
+library(flextable)
+library(tidyverse)
+library(officer)
+library(officedown)
+library(knitr)
+```
+
+```{r chargement_bases, include=FALSE}
+load(here("Data/nom_base.RData"))
+load(here("Data/tables_desc.RData"))
+# load(here("Data/tables_analyses.RData"))
+```
+
+
+
+```{r}
+block_toc()
+```
+
+\newpage
+
+# Objectivess
+
+- Bullet list for the objectives.
+
+
+# Methods
+
+Continuous variables are described with the median, 1^st^ and 3^rd^ quartiles and the range.
+If the count is less than 4, 
+Categorical variables are described by the counts with percentages.
+
+The association of categorical variables were test using &chi;^2^ test/Fisher's exact test and continuous variables using Z-test/Student T-test/Wilcoxon's rank sum test.
+All tests are bilateral with type I error rate of 5%.
+
+\newpage
+
+# Datamanagement
+
+## Choices and corrections
+
+
+
+
+## Discrepancies
+
+
+
+\newpage
+
+# Description
+
+
+
+
+
+
+

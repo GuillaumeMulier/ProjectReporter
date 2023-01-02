@@ -1,4 +1,6 @@
-# {{folder_name}}
+# {{PROJECT_ENV$acronyme}}
+
+{{PROJECT_ENV$titre}}
 
 
 # Authors

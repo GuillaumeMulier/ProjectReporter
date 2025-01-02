@@ -1,8 +1,16 @@
 ---
 title: "{{PROJECT_ENV$titre}}"
-author: "{{paste(c(PROJECT_ENV$cliniciens, PROJECT_ENV$auteur, PROJECT_ENV$chefs), collapse = ", ")}}"
+author: 
+  - {{PROJECT_ENV$cliniciens}}
+  - {{paste(PROJECT_ENV$auteur, PROJECT_ENV$chefs, 'Service de Biostatistiques et Information Médicale', sep = ', ')}}
 date: "`r format(Sys.Date(), format = c('%d/%m/%Y'))`"
 output: 
+  html_document:
+    toc: true
+    toc_float:
+      toc_collapsed: true
+    toc_depth: 3
+    theme: sandstone
   officedown::rdocx_document:
     reference_docx: template_word_rmd.docx
 editor_options: 

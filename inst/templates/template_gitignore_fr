@@ -1,4 +1,4 @@
-# ignore R data files
+# Ignorer les fichiers de données
 .Rproj.user
 .Rhistory
 *.RData
@@ -7,11 +7,11 @@
 .Rapp.history
 .Rhistory.RData
 
-# Temporary files created by R markdown
+# fichiers temporaires R markdown
 *.utf8.md
 *.knit.md
 
-# ignore other types of data files
+# Autres types de fichiers de données
 *.xlsx
 *.xls
 *.csv
@@ -20,7 +20,7 @@
 *.sav
 *.txt
 
-# ignore data folder/symbolic link/sensitive file
+# Dossiers avec données sensibles
 Data/
 Archives/
 Reports/

@@ -19,3 +19,7 @@ Statisticians: {{paste(c(PROJECT_ENV$auteur, PROJECT_ENV$chefs), collapse = ", "
 
 - ...
 
+# Summary of exchanges
+
+...
+

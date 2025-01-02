@@ -16,7 +16,7 @@
 #' @examples
 PrepareProject <- function(
     Chemin,
-    Template = TemplateProjet,
+    Template = if (PROJECT_ENV$language == "eng") TemplateProjetEng else TemplateProjetFr,
     ClearEnv = TRUE
   ) {
 

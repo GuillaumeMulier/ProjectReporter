@@ -33,8 +33,8 @@ library(knitr)
 ```
 
 ```{r chargement_bases, include=FALSE}
-load(here("Data/nom_base.RData"))
-load(here("Data/tables_desc.RData"))
+load(here("Data/base_v1.RData"))
+load(here("Data/description.RData"))
 # load(here("Data/tables_analyses.RData"))
 ```
 
@@ -46,7 +46,7 @@ block_toc()
 
 \newpage
 
-# Objectivess
+# Objectives
 
 - Bullet list for the objectives.
 

@@ -82,17 +82,17 @@ TemplateProjetFr <- list(
     glue = TRUE
   )),
   import = rlang::expr(list(
-    template_filename = fs::path_package("inst/templates/template_import.R", package = "ProjectReporter"),
+    template_filename = fs::path_package("inst/templates/template_import_fr.R", package = "ProjectReporter"),
     filename = "Scripts/01 - Import.R",
     glue = TRUE
   )),
   verif = rlang::expr(list(
-    template_filename = fs::path_package("inst/templates/template_verifications.R", package = "ProjectReporter"),
+    template_filename = fs::path_package("inst/templates/template_verifications_fr.R", package = "ProjectReporter"),
     filename = "Scripts/02 - Verifications.R",
     glue = TRUE
   )),
   description = rlang::expr(list(
-    template_filename = fs::path_package("inst/templates/template_description.R", package = "ProjectReporter"),
+    template_filename = fs::path_package("inst/templates/template_description_fr.R", package = "ProjectReporter"),
     filename = "Scripts/03 - Description.R",
     glue = TRUE
   )),

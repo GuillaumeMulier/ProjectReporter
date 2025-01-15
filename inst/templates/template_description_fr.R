@@ -1,10 +1,10 @@
 # --------------------------------------------------- #
-# Description of the database and descriptive figures #
-# Created the {{format(Sys.Date(), "%d/%m/%Y")}}, modifed the {{format(Sys.Date(), "%d/%m/%Y")}}      #
+# Description de la base + Figures descriptives       #
+# Créé le {{format(Sys.Date(), "%d/%m/%Y")}}, modifié le {{format(Sys.Date(), "%d/%m/%Y")}} #
 # --------------------------------------------------- #
 
 
-# I/ Packages and helpers ----
+# I/ Packages et helpers ----
 
 library(tidyverse)
 library(Datavar)
@@ -13,7 +13,7 @@ library(Datavar)
 theme_set(theme_light(base_size = 16))
 
 
-# II/ Loading bases ----
+# II/ Charger les bases ----
 
 load("Data/base_v1.RData")
 {{PROJECT_ENV$nom_datavar}} <- read.csv2("Data/datavar.csv")
@@ -24,13 +24,13 @@ load("Data/base_v1.RData")
 # Terrain
 TabTer <- bind_cols(Description({{PROJECT_ENV$nom_base}}, .Datavar = {{PROJECT_ENV$nom_datavar}},
                                 .Listevar = names({{PROJECT_ENV$nom_base}})[grepl("^ter_", names({{PROJECT_ENV$nom_base}}))],
-                                Langue = "eng"),
+                                Langue = "fr"),
                     Description({{PROJECT_ENV$nom_base}}, .Datavar = {{PROJECT_ENV$nom_datavar}}, y = groupe,
                                 .Listevar = names({{PROJECT_ENV$nom_base}})[grepl("^ter_", names({{PROJECT_ENV$nom_base}}))],
-                                Langue = "eng")[, -c(1, 2)])
+                                Langue = "fr")[, -c(1, 2)])
 
 
-# IV/ Save results ----
+# IV/ Sauvegarde des résultats ----
 
 save(TabTer,
      file = "Data/description.RData")

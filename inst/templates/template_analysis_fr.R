@@ -1,10 +1,10 @@
 # ------------------------------------------------ #
-# Analysis of the database and figures for results #
-# Created the {{format(Sys.Date(), "%d/%m/%Y")}}, modifed the {{format(Sys.Date(), "%d/%m/%Y")}}    #
+# Analyse de la base et figures des résultats      #
+# Créé le {{format(Sys.Date(), "%d/%m/%Y")}}, modifié le {{format(Sys.Date(), "%d/%m/%Y")}}#
 # ------------------------------------------------ #
 
 
-# I/ Packages and helpers ----
+# I/ Packages et helpers ----
 
 library(tidyverse)
 library(Datavar)
@@ -13,23 +13,23 @@ library(Datavar)
 theme_set(theme_light(base_size = 16))
 
 
-# II/ Loading bases ----
+# II/ Chargement et modification de la base ----
 
-# A/ Loading ----
+# A/ Chargement de la base ----
 
 load("Data/base_v1.RData")
 {{PROJECT_ENV$nom_datavar}} <- read.csv2("Data/datavar.csv")
 
-# B/ Modification of the database ----
+# B/ Modification de la base ----
 
 {{PROJECT_ENV$nom_base}} <- {{PROJECT_ENV$nom_base}} %>%
   mutate()
 
 
-# III/ Analysis ----
+# III/ Analyse ----
 
 
-# IV/ Save results ----
+# IV/ Sauvagarde ----
 
 save({{PROJECT_ENV$nom_base}},
      file = "Data/analyse.RData")

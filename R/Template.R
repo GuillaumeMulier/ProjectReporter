@@ -97,7 +97,7 @@ TemplateProjetFr <- list(
     glue = TRUE
   )),
   analyse = rlang::expr(list(
-    template_filename = fs::path_package("inst/templates/template_analysis.R", package = "ProjectReporter"),
+    template_filename = fs::path_package("inst/templates/template_analysis_fr.R", package = "ProjectReporter"),
     filename = "Scripts/04 - Analysis.R",
     glue = TRUE
   )),

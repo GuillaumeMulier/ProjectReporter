@@ -35,7 +35,7 @@ library(knitr)
 ```{r chargement_bases, include=FALSE}
 load(here("Data/base_v1.RData"))
 load(here("Data/description.RData"))
-# load(here("Data/tables_analyses.RData"))
+# load(here("Data/analyse.RData"))
 ```
 
 

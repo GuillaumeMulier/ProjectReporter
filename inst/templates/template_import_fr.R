@@ -1,10 +1,10 @@
 # ---------------------------------------------- #
-# Import and datamanagement for the dataset(s)   #
-# Author: G. Mulier                              #
-# Created the {{format(Sys.Date(), "%d/%m/%Y")}}, modifed the {{format(Sys.Date(), "%d/%m/%Y")}} #
+# Import et datamanagement de la base            #
+# Auteur: G. Mulier                              #
+# Créé le {{format(Sys.Date(), "%d/%m/%Y")}}, modifié le {{format(Sys.Date(), "%d/%m/%Y")}}      #
 # ---------------------------------------------- #
 
-# Packages and helpers ----
+# Packages et helpers ----
 
 library(tidyverse)
 library(Datavar)
@@ -12,7 +12,7 @@ library(Datavar)
 library(lubridate)
 
 
-# I/ Import bases ----
+# I/ Import des bases ----
 
 {{PROJECT_ENV$nom_base}} <- read.csv("Data/base.csv", stringsAsFactors = FALSE, na.strings = c("", " ", "NA"))
 
@@ -36,29 +36,29 @@ if (FALSE) {
 }
 
 
-# II/ Correct mistakes ----
+# II/ Correction des erreurs dans la base ----
 
 
 
-# III/ Recompute variables and dates ----
-
-{{PROJECT_ENV$nom_base}} <- {{PROJECT_ENV$nom_base}} %>%
-  mutate()
-
-
-# IV/ Create new variables ----
+# III/ Recalcul des variables et mise au format ----
 
 {{PROJECT_ENV$nom_base}} <- {{PROJECT_ENV$nom_base}} %>%
   mutate()
 
 
+# IV/ Creation de nouvelles variables ----
+
+{{PROJECT_ENV$nom_base}} <- {{PROJECT_ENV$nom_base}} %>%
+  mutate()
 
 
 
 
-# V/ Saving bases ----
 
-if (FALSE) { # Never execute when source
+
+# V/ Sauvegarde des bases ----
+
+if (FALSE) { # Ne jamais exécuter quand on fait source
   {{PROJECT_ENV$nom_datavar}} <- CreateDatavar({{PROJECT_ENV$nom_base}}, Options = DefaultOptions())
   write.csv({{PROJECT_ENV$nom_datavar}}, file = "Data/datavar.csv", row.names = FALSE)
 }

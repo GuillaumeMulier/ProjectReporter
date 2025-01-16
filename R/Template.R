@@ -118,4 +118,4 @@ TemplateProjetFr <- list(
   ))
 )
 attr(TemplateProjetFr, "script_path") <-
-  rlang::expr(fs::path_package("inst/templates/delete.R", package = "ProjectReporter"))
+  rlang::expr(fs::path_package("inst/templates/delete_fr.R", package = "ProjectReporter"))

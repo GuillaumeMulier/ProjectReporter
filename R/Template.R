@@ -53,7 +53,7 @@ TemplateProjetEng <- list(
   template_word = rlang::expr(list(
     template_filename = fs::path_package("inst/templates/template_word_rmd.docx", package = "ProjectReporter"),
     filename = "Scripts/template_word_rmd.docx",
-    glue = TRUE
+    glue = FALSE
   ))
 )
 attr(TemplateProjetEng, "script_path") <-
@@ -114,7 +114,7 @@ TemplateProjetFr <- list(
   template_word = rlang::expr(list(
     template_filename = fs::path_package("inst/templates/template_word_rmd.docx", package = "ProjectReporter"),
     filename = "Scripts/template_word_rmd.docx",
-    glue = TRUE
+    glue = FALSE
   ))
 )
 attr(TemplateProjetFr, "script_path") <-

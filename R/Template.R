@@ -52,7 +52,7 @@ TemplateProjetEng <- list(
   )),
   template_word = rlang::expr(list(
     template_filename = fs::path_package("inst/templates/template_word_rmd.docx", package = "ProjectReporter"),
-    filename = "Scripts/05bis - Report.R",
+    filename = "Scripts/template_word_rmd.docx",
     glue = TRUE
   ))
 )
@@ -102,8 +102,8 @@ TemplateProjetFr <- list(
     glue = TRUE
   )),
   rapport = rlang::expr(list(
-    template_filename = fs::path_package("inst/templates/template_report.Rmd", package = "ProjectReporter"),
-    filename = "Scripts/05 - Report.Rmd",
+    template_filename = fs::path_package("inst/templates/template_report_fr.Rmd", package = "ProjectReporter"),
+    filename = "Scripts/05 - Rapport.Rmd",
     glue = TRUE
   )),
   gen_rapport = rlang::expr(list(
@@ -113,7 +113,7 @@ TemplateProjetFr <- list(
   )),
   template_word = rlang::expr(list(
     template_filename = fs::path_package("inst/templates/template_word_rmd.docx", package = "ProjectReporter"),
-    filename = "Scripts/05bis - Report.R",
+    filename = "Scripts/template_word_rmd.docs",
     glue = TRUE
   ))
 )

@@ -2,7 +2,7 @@
 title: "{{PROJECT_ENV$titre}}"
 author: 
   - {{PROJECT_ENV$cliniciens}}
-  - {{paste(PROJECT_ENV$auteur, PROJECT_ENV$chefs, 'Service de Biostatistiques et Information Médicale', sep = ', ')}}
+  - {{paste(PROJECT_ENV$auteur, PROJECT_ENV$chefs, 'Department of Biostatistics and Medical Information, Saint-Louis hospital', sep = ', ')}}
 date: "`r format(Sys.Date(), format = c('%d/%m/%Y'))`"
 output: 
   html_document:
@@ -23,7 +23,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ```{r packages, include=FALSE}
-here::i_am("Scripts/05 - Rapport.Rmd")
+here::i_am("Scripts/05 - Report.Rmd")
 library(here)
 library(flextable)
 library(tidyverse)
@@ -39,28 +39,28 @@ load(here("Data/description.RData"))
 ```
 
 
-
 ```{r}
-block_toc()
+NumTable <- 0
+NumFigure <- 0
 ```
 
-\newpage
 
 # Objectives
 
+- ...
 - Bullet list for the objectives.
 
 
-# Methods
+# Statistical methods
 
 Continuous variables are described with the median, 1^st^ and 3^rd^ quartiles and the range.
-If the count is less than 4, 
+If the count is less than 4, only the median is presented.
 Categorical variables are described by the counts with percentages.
 
 The association of categorical variables were test using &chi;^2^ test/Fisher's exact test and continuous variables using Z-test/Student T-test/Wilcoxon's rank sum test.
 All tests are bilateral with type I error rate of 5%.
 
-\newpage
+Analyses are performed using R version X.X.X.
 
 # Datamanagement
 
@@ -68,12 +68,25 @@ All tests are bilateral with type I error rate of 5%.
 
 
 
-
-## Discrepancies
-
+## Questions on the base
 
 
-\newpage
+
+
+## Potential discrepancies
+
+
+
+
+## Already treated questions
+
+<!-- <details> -->
+<!--   <summary>Mail answers from ...</summary> -->
+<!-- - retour 1 -->
+<!-- - retour 2 -->
+<!-- - ... -->
+<!-- </details> -->
+
 
 # Description
 

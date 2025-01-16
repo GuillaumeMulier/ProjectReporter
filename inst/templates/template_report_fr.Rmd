@@ -1,0 +1,100 @@
+---
+title: "{{PROJECT_ENV$titre}}"
+author: 
+  - {{PROJECT_ENV$cliniciens}}
+  - {{paste(PROJECT_ENV$auteur, PROJECT_ENV$chefs, 'Service de Biostatistiques et Information Médicale, hôpital Saint-Louis', sep = ', ')}}
+date: "`r format(Sys.Date(), format = c('%d/%m/%Y'))`"
+output: 
+  html_document:
+    toc: true
+    toc_float:
+      toc_collapsed: true
+    toc_depth: 3
+    theme: sandstone
+  officedown::rdocx_document:
+    reference_docx: template_word_rmd.docx
+editor_options: 
+  markdown: 
+    wrap: sentence
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r packages, include=FALSE}
+here::i_am("Scripts/05 - Rapport.Rmd")
+library(here)
+library(flextable)
+library(tidyverse)
+library(officer)
+library(officedown)
+library(knitr)
+```
+
+```{r chargement_bases, include=FALSE}
+load(here("Data/base_v1.RData"))
+load(here("Data/description.RData"))
+# load(here("Data/analyse.RData"))
+```
+
+
+```{r}
+NumTable <- 0
+NumFigure <- 0
+```
+
+
+# Objectifs
+
+- ...
+- Liste des objectifs.
+
+
+# Méthodes statistiques
+
+Les variables continues sont décrites par la médiane, les 1^er^ et 3^ème^ quartiles, le minimum et le maximum.
+S'il y a moins de 4 sujets, seule la médiane est présentée.
+Les variables catégorielles sont décrites par l'effectif assorti du pourcentage pour chaque catégorie.
+
+L'association des variables catégorielles est testée par test du &chi;^2^ / test exact de Fisher et les variables continues par un test Z / Student / de la somme des rangs de Wilcoxon.
+Les tests sont bilatéraux et un risque d'erreur de type I de 5% a été appliqué lors des analyses.
+
+Les tests seront bilatéraux et un risque d'erreur de type I de 5% sera apppliqué.
+
+Les analyses seront réalisées sur le logiciel R version 4.3.0.
+
+# Datamanagement
+
+## Choix et corrections
+
+
+
+## Questions sur la base
+
+
+
+
+## Incohérences potentielles
+
+
+
+
+## Questions déjà traitées
+
+<!-- <details> -->
+<!--   <summary>Retours de mail du ...</summary> -->
+<!-- - retour 1 -->
+<!-- - retour 2 -->
+<!-- - ... -->
+<!-- </details> -->
+
+
+# Description
+
+
+
+
+
+
+
